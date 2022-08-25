@@ -20,7 +20,7 @@ app.use(cors())
 app.use(express.json());
 app.use(helmet());
 
-app.use("/api/userData", authRoute);
+app.use("/api/userds", authRoute);
 
 app.listen(port, () => {
   console.log(`server is running on ${port}`);

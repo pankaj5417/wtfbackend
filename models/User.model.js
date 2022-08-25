@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema(
   {
     id:{
       type: mongoose.Schema.Types.ObjectId,
-      required:true,
+      // required:true,
 
     },
     uid:{},
@@ -52,4 +52,4 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("users", userSchema);
+module.exports = mongoose.model("userds", userSchema);
