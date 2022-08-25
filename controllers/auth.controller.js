@@ -18,7 +18,7 @@ router.post(
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/.test(value);
     if (!regex) {
       throw new Error(
-        "Password must consist of one special character and must start with capital letter"
+        "Password must be of 8 character,should contain one special character and must start with capital letter"
       );
     }
   }),
@@ -31,7 +31,7 @@ router.post(
           [param]: msg,
         };
       });
-      return res.status(400).json({ errors: newErrors });
+      return res.status(501).json({ errors: newErrors });
     }
 
     try {
